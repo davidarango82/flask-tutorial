@@ -4,6 +4,7 @@ from flask import Flask
 
 from . import db
 
+from . import auth
 
 def create_app(test_config=None):
     # create and configure the app
@@ -33,5 +34,7 @@ def create_app(test_config=None):
 
     # registration of new cli commands
     db.init_app(app)
+
+    app.register_blueprint(auth.bp)
 
     return app
