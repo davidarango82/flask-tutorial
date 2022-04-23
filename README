@@ -1,3 +1,4 @@
+
 --- USER MANUAL ---
 Before running any flask app, activate de module´s virtual env:
 $ . venv/bin/activate
@@ -12,3 +13,4 @@ $ flask run
 
 'flaskr' app custom cli commands:
 $ flask init-db # to initialize the sqlite db for a flaskr app instance
+
