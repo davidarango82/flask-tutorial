@@ -1,0 +1,4 @@
+To run a flask module, and enable all development features:
+$ export FLASK_APP=<module name>
+$ export FLASK_ENV=development
+$ flask run
