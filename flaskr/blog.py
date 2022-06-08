@@ -74,6 +74,17 @@ def update(id):
     return render_template('blog/update.html', post=post)
 
 
+@bp.route('/<int:id>/delete', methods=('POST',))
+@login_required
+# this view doesn´t have its own template, the delete button is part of the update.html template.
+def delete(id):
+    get_post(id)
+    db = get_db()
+    db.execute('DELETE FROM post WHERE id = ?', (id,))
+    db.commit()
+    return redirect(url_for('blog.index'))
+
+
 def get_post(id, check_author=True):
     post = get_db().execute(
         'SELECT p.id, title, body, created, author_id, username'
