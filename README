@@ -18,5 +18,7 @@ Whenever creating a new app instance, a new database must be created for it.
 So the previous command has to be executed.
 
 To install flaskr as a package, in 'development' or 'editable' mode:
-$ pip install -e
+$ pip install -e .
+
+
 
